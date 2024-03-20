@@ -44,3 +44,5 @@ module.exports = {
     await queryInterface.dropTable('alunos');
   },
 };
+
+//
