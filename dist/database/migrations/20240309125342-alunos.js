@@ -44,3 +44,5 @@
     await queryInterface.dropTable('alunos');
   },
 };
+
+//
