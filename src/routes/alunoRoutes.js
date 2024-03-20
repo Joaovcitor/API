@@ -8,7 +8,7 @@ const router = new Router();
 router.get('/', AlunoController.index);
 router.post('/', AlunoController.store);
 router.put('/:id', AlunoController.update);
-router.get('/:id', loginRequired, AlunoController.show);
+router.get('/:id', AlunoController.show);
 router.delete('/:id', loginRequired, AlunoController.delete);
 
 export default router;
