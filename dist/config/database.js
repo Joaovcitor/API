@@ -3,7 +3,7 @@ require('dotenv').config();
 
 module.exports = {
   dialect: 'postgres',
-  url: process.env.DATA_URL,
+  url: process.env.DATABASE_URL,
   define: {
     timestamps: true,
     underscored: true,
