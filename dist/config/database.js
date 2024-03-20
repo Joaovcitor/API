@@ -1,4 +1,4 @@
-"use strict";// eslint-disable-next-line import/no-extraneous-dependencies
+// eslint-disable-next-line import/no-extraneous-dependencies
 require('dotenv').config();
 // eslint-disable-next-line import/no-extraneous-dependencies
 const pg = require('pg');
