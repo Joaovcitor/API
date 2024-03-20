@@ -6,9 +6,9 @@ var _AlunoController = require('../controllers/AlunoController'); var _AlunoCont
 const router = new (0, _express2.default)();
 
 router.get('/', _AlunoController2.default.index);
-router.post('/', _loginRequired2.default, _AlunoController2.default.store);
-router.put('/:id', _loginRequired2.default, _AlunoController2.default.update);
-router.get('/:id', _loginRequired2.default, _AlunoController2.default.show);
+router.post('/', _AlunoController2.default.store);
+router.put('/:id', _AlunoController2.default.update);
+router.get('/:id', _AlunoController2.default.show);
 router.delete('/:id', _loginRequired2.default, _AlunoController2.default.delete);
 
 exports. default = router;
