@@ -28,7 +28,7 @@ class App {
     this.app.use('/', homeRoutes);
     this.app.use('/users/', userRoutes);
     this.app.use('/tokens/', tokenRoutes);
-    this.app.use('/alunos/', alunoRoutes);
+    this.app.use('/alunoss/', alunoRoutes);
     this.app.use('/fotos/', fotoRoutes);
   }
 }
