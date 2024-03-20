@@ -1,7 +1,6 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 require('dotenv').config();
 // eslint-disable-next-line import/no-extraneous-dependencies
-const pg = require('pg');
 
 module.exports = {
   dialect: 'postgres',
@@ -20,6 +19,5 @@ module.exports = {
       rejectUnauthorized: false,
     },
   },
-  dialectModule: pg,
   timezone: 'America/Sao_Paulo',
 };
