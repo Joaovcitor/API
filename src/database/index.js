@@ -6,7 +6,13 @@ import Foto from '../models/Foto';
 
 const models = [Aluno, User, Foto];
 
-const conecction = new Sequelize(databaseConfig);
+// Correção: Renomear a variável 'conecction' para 'connection'
+const connection = new Sequelize(databaseConfig);
 
-models.forEach((model) => model.init(conecction));
-models.forEach((model) => model.associate && model.associate(conecction.models));
+// Inicializa cada modelo com a conexão
+models.forEach((model) => model.init(connection));
+
+// Configura as associações entre os modelos, se houver
+models.forEach((model) => model.associate && model.associate(connection.models));
+
+export default connection;
