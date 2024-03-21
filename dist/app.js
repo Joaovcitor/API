@@ -3,10 +3,10 @@ var _dotenv = require('dotenv'); var _dotenv2 = _interopRequireDefault(_dotenv);
 var _express = require('express'); var _express2 = _interopRequireDefault(_express);
 var _path = require('path');
 var _homeRoutes = require('./routes/homeRoutes'); var _homeRoutes2 = _interopRequireDefault(_homeRoutes);
-var _userRoutes = require('./routes/userRoutes'); var _userRoutes2 = _interopRequireDefault(_userRoutes);
-var _tokenRoutes = require('./routes/tokenRoutes'); var _tokenRoutes2 = _interopRequireDefault(_tokenRoutes);
+// import userRoutes from './routes/userRoutes';
+// import tokenRoutes from './routes/tokenRoutes';
 var _alunoRoutes = require('./routes/alunoRoutes'); var _alunoRoutes2 = _interopRequireDefault(_alunoRoutes);
-var _fotoRoutes = require('./routes/fotoRoutes'); var _fotoRoutes2 = _interopRequireDefault(_fotoRoutes);
+// import fotoRoutes from './routes/fotoRoutes';
 require('./database');
 
 _dotenv2.default.config();
@@ -26,10 +26,10 @@ class App {
 
   routes() {
     this.app.use('/', _homeRoutes2.default);
-    this.app.use('/users/', _userRoutes2.default);
-    this.app.use('/tokens/', _tokenRoutes2.default);
+    // this.app.use('/users/', userRoutes);
+    // this.app.use('/tokens/', tokenRoutes);
     this.app.use('/alunoss/', _alunoRoutes2.default);
-    this.app.use('/fotos/', _fotoRoutes2.default);
+    // this.app.use('/fotos/', fotoRoutes);
   }
 }
 

@@ -1,13 +1,4 @@
-// eslint-disable-next-line no-underscore-dangle
-function _interopRequireDefault(obj) {
-  // eslint-disable-next-line no-underscore-dangle
-  return obj && obj.__esModule ? obj : { default: obj };
-}
-// eslint-disable-next-line no-underscore-dangle
-const _app = require('./app');
+"use strict"; function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }var _app = require('./app'); var _app2 = _interopRequireDefault(_app);
 
-// eslint-disable-next-line no-underscore-dangle
-const _app2 = _interopRequireDefault(_app);
-
-const port = 3000;
+const port = process.env.PORT;
 _app2.default.listen(port);
