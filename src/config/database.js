@@ -6,6 +6,7 @@ const pg = require('pg');
 module.exports = {
   dialect: 'postgres',
   url: process.env.DATABASE_URL,
+  host: process.env.DATABASE_HOST,
   define: {
     timestamps: true,
     underscored: true,
