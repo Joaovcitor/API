@@ -1,5 +1,7 @@
 require('dotenv').config();
 
-export default {
+const config = {
   url: process.env.APP_URL,
 };
+
+export default config;
