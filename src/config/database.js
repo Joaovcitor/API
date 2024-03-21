@@ -1,26 +1,16 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 require('dotenv').config();
 // eslint-disable-next-line import/no-extraneous-dependencies
-const pg = require('pg');
+// const pg = require('pg');
 
-module.exports = {
-  dialect: 'postgres',
-  url: process.env.DATABASE_URL,
-  host: process.env.DATABASE_HOST,
-  define: {
-    timestamps: true,
-    underscored: true,
-    underscoredAll: true,
-    createdAt: 'created_at',
-    updatedAt: 'updated_at',
-  },
-  dialectOptions: {
-    timezone: 'America/Sao_Paulo',
-    ssl: {
-      require: true,
-      rejectUnauthorized: false,
-    },
-  },
-  dialectModule: pg,
-  timezone: 'America/Sao_Paulo',
-};
+const { Pool } = require('pg');
+require('dotenv').config();
+
+const pool = new Pool({
+  connectionString: 'postgres://default:2Krw1kndQGNv@ep-aged-moon-a4d47ga0-pooler.us-east-1.aws.neon.tech:5432/verceldb?sslmode=require',
+});
+
+pool.connect((err) => {
+  if (err) throw err;
+  console.log('FUNCIONOU ESSA BUCETA');
+});
