@@ -6,8 +6,8 @@ const pg = require('pg');
 module.exports = {
   dialect: 'postgres',
   url: process.env.DATABASE_URL,
-  password: process.env.PASSWORD,
-  username: process.env.USERNAME,
+  // password: process.env.PASSWORD,
+  // username: process.env.USERNAME,
   define: {
     timestamps: true,
     underscored: true,
